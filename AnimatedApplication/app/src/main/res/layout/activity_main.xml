@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:animateLayoutChanges="true">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bUpArrow"
+        android:text="Up arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bDownArrow"
+        android:text="Down arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/bUpArrow"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bVectorAnimator"
+        android:text="Vector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/bDownArrow"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bRotateArrow"
+        android:text="Rotate arrow Up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bUpArrow" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bRotateArrowDown"
+        android:text="Rotate arrow Down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/bRotateArrow"
+        app:layout_constraintTop_toBottomOf="@id/bUpArrow" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bLaunchRocket"
+        android:text="Launch Rocket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/bRotateArrowDown"
+        app:layout_constraintTop_toBottomOf="@id/bUpArrow" />
+    <ImageView
+        android:id="@+id/ivAnimated"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/arrow_down"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <ImageView
+        android:id="@+id/ivRocket"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_rocket"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
